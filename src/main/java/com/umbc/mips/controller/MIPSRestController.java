@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.umbc.mips.service.MIPSSimulatorService;
 
@@ -25,14 +24,12 @@ public class MIPSRestController {
 	}
 
 	@PostMapping("/api/executeSimulator")
-	public ResponseEntity<String> executeSimulator(@RequestParam("configFile") String instructions) throws IOException {
+	public ResponseEntity<int[]> executeSimulator(@RequestParam("configFile") String instructions) throws IOException {
 		
-		String result = null;
+		int[] result = null;
 		if (null != instructions) {
 			result = service.executeSimulator(instructions);
-		} else {
-			return ResponseEntity.ok("Add Instructions");
-		}
+		} 
 		
 		return ResponseEntity.ok(result);
 

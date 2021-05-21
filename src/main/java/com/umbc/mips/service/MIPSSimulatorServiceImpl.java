@@ -9,9 +9,13 @@ public class MIPSSimulatorServiceImpl implements MIPSSimulatorService {
 	
 
 	@Override
-	public String executeSimulator(String instructions) {
-		// TODO Auto-generated method stub
-		return null;
+	public int[] executeSimulator(String instructions) {
+
+        Parse.parse(instructions);
+        Execute.printAllRegisters();
+        Execute.execute();
+        Execute.printAllRegisters();
+		return Execute.registers;
 	}
 
 }

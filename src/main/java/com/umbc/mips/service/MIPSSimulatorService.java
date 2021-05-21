@@ -7,6 +7,6 @@ import org.springframework.web.multipart.MultipartFile;
 public interface MIPSSimulatorService {
 
 	
-	public String executeSimulator(String instructions);
+	public int[] executeSimulator(String instructions);
 	
 }
