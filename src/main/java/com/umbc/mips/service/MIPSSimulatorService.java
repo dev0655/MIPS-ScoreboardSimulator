@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Component
 public interface MIPSSimulatorService {
 
-	public String executeSimulator(MultipartFile configFile, MultipartFile instructionFile, MultipartFile dataFile);
+	
+	public String executeSimulator(String instructions);
 	
 }

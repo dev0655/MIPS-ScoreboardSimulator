@@ -6,8 +6,10 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class MIPSSimulatorServiceImpl implements MIPSSimulatorService {
 
+	
+
 	@Override
-	public String executeSimulator(MultipartFile configFile, MultipartFile instructionFile, MultipartFile dataFile) {
+	public String executeSimulator(String instructions) {
 		// TODO Auto-generated method stub
 		return null;
 	}
