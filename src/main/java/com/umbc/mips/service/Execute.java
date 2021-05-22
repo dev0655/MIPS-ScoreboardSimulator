@@ -8,10 +8,15 @@ class Execute {
     public static Integer [] registers = new Integer[33];
 
     public static List<Integer[]> execute() {
+    	int counter=0;
     	Arrays.fill(registers, 0);
     	List<Integer[]> data = new ArrayList<>();
         // Loop on all instructions
         for(int a = 0; a < Data.instructions.length; a++) {
+        	counter++;
+        	if(counter>1000) {
+        		break;
+        	}
             int dest = -1;
             switch(Data.instructions[a][0]) {
                 case "ADD":
