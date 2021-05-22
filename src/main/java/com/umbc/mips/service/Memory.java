@@ -2,7 +2,7 @@ package com.umbc.mips.service;
 
 class Memory {
     private static int MEM_SIZE = 1024;
-    private static char []mem = new char[MEM_SIZE];
+    public static char []mem = new char[MEM_SIZE];
 
     public static boolean set(int pos, int value) {
         if(pos >= MEM_SIZE) {

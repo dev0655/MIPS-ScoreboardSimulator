@@ -1,9 +1,15 @@
 package com.umbc.mips.service;
 
-class Execute {
-    private static int [] registers = new int[32];
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-    public static void execute() {
+class Execute {
+    public static Integer [] registers = new Integer[33];
+
+    public static List<Integer[]> execute() {
+    	Arrays.fill(registers, 0);
+    	List<Integer[]> data = new ArrayList<>();
         // Loop on all instructions
         for(int a = 0; a < Data.instructions.length; a++) {
             int dest = -1;
@@ -184,7 +190,12 @@ class Execute {
                 default:
                     System.out.println("Instruction Not Supported");
             }
+            Integer temp[] = new Integer[registers.length+1];
+            temp = registers.clone();
+            temp[32] =a;
+            data.add(temp.clone());
         }
+		return data;
     }
 
     private static int findAddress(String str) {
