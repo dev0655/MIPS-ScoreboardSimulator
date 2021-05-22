@@ -41,7 +41,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BEQ":
@@ -50,7 +50,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BEQZ":
@@ -59,7 +59,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BGEZ":
@@ -68,7 +68,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BGTZ":
@@ -77,7 +77,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BLEZ":
@@ -86,7 +86,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BLTZ":
@@ -95,7 +95,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BNE":
@@ -104,7 +104,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "BNEZ":
@@ -113,7 +113,7 @@ class Execute {
                     if(dest == -1) {
                         System.out.println("Flag not found in instructions");
                     } else {
-                        a = dest;
+                        a = dest-1;
                     }
                     break;
                 case "DIV":
